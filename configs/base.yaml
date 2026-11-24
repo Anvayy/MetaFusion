@@ -1,0 +1,82 @@
+# Base configuration for MetaFusion + KNIGHT Kidney Tumor Risk Classification
+# All experiment runs inherit/override from this file. No magic numbers in code.
+
+project:
+  name: metafusion_knight
+  seed: 42
+
+paths:
+  knight_repo: KNIGHT
+  knight_json: KNIGHT/knight/data/knight.json
+  knight_imaging_dir: KNIGHT/knight/data
+  kits21_seg_dir: data/raw/kits21_segmentations
+  splits_file: data/splits/folds.json
+  slice_index_csv: data/processed/slice_index.csv
+  slices_dir: data/processed/slices
+  outputs_dir: outputs
+  reports_dir: outputs/reports
+  figures_dir: outputs/figures
+  checkpoints_dir: outputs/checkpoints
+  logs_dir: outputs/logs
+
+data:
+  id_column: case_id
+  target_column: aua_risk_group
+  permitted_clinical_features:
+    - age_at_nephrectomy
+    - gender
+    - body_mass_index
+    - comorbidities
+    - smoking_history
+    - age_when_quit_smoking
+    - pack_years
+    - chewing_tobacco_use
+    - alcohol_use
+    - last_preop_egfr
+    - radiographic_size
+    - voxel_spacing
+  five_class_map:
+    benign: 0
+    low_risk: 1
+    intermediate_risk: 2
+    high_risk: 3
+    very_high_risk: 4
+  binary_map:
+    benign: 0
+    low_risk: 0
+    intermediate_risk: 0
+    high_risk: 1
+    very_high_risk: 1
+
+cv:
+  n_splits: 5
+  shuffle: true
+  seed: 42
+  stratify_on: five_class
+
+imaging:
+  tumor_label: 2  # KiTS convention (kidney=1, tumor=2, cyst=3); must be verified on actual masks in Phase 3
+  hu_window_min: -160.0  # Soft-tissue window: center 40, width 400 -> [40-200, 40+200] = [-160, 240]
+  hu_window_max: 240.0
+  image_size: 224
+  imagenet_mean: [0.485, 0.456, 0.406]
+  imagenet_std: [0.229, 0.224, 0.225]
+
+model:
+  backbone: resnet18
+  pretrained: true
+  image_embed_dim: 512
+  clinical_hidden_dims: [128, 128]
+  head_hidden_dim: 64
+  freeze_backbone: true
+
+training:
+  optimizer: adamw
+  lr_backbone: 1.0e-5
+  lr_fusion_head: 1.0e-4
+  weight_decay: 1.0e-4
+  batch_size: 8
+  max_epochs: 50
+  early_stopping_patience: 10
+  early_stopping_metric: balanced_accuracy
+  use_class_weights: true

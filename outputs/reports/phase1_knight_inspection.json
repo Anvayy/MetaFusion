@@ -1,0 +1,1063 @@
+{
+  "source_file": "X:\\Metafusion\\KNIGHT\\knight\\data\\knight.json",
+  "n_cases": 300,
+  "unique_case_ids": 300,
+  "first_case_id": "case_00000",
+  "last_case_id": "case_00299",
+  "total_top_level_fields": 41,
+  "permitted_feature_count": 12,
+  "missing_permitted_features": [],
+  "forbidden_field_count": 27,
+  "target_column": "aua_risk_group",
+  "unexpected_target_values": [],
+  "five_class_distribution": {
+    "benign": {
+      "id": 0,
+      "count": 25,
+      "pct": 8.33
+    },
+    "low_risk": {
+      "id": 1,
+      "count": 142,
+      "pct": 47.33
+    },
+    "intermediate_risk": {
+      "id": 2,
+      "count": 48,
+      "pct": 16.0
+    },
+    "high_risk": {
+      "id": 3,
+      "count": 40,
+      "pct": 13.33
+    },
+    "very_high_risk": {
+      "id": 4,
+      "count": 45,
+      "pct": 15.0
+    }
+  },
+  "binary_distribution": {
+    "0_non_high_risk (benign/low/intermediate)": {
+      "count": 215,
+      "pct": 71.67
+    },
+    "1_high_or_very_high_risk": {
+      "count": 85,
+      "pct": 28.33
+    }
+  },
+  "top_level_schema": {
+    "case_id": {
+      "role": "identifier",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "age_at_nephrectomy": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "int": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "gender": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "body_mass_index": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "float": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "comorbidities": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "dict": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "smoking_history": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "age_when_quit_smoking": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 35,
+        "str": 265
+      },
+      "null_count": 35,
+      "null_pct": 11.67
+    },
+    "pack_years": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 106,
+        "int": 137,
+        "str": 57
+      },
+      "null_count": 106,
+      "null_pct": 35.33
+    },
+    "chewing_tobacco_use": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "alcohol_use": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "intraoperative_complications": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "dict": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "hospitalization": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "int": 299,
+        "str": 1
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "ischemia_time": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 13,
+        "int": 175,
+        "str": 112
+      },
+      "null_count": 13,
+      "null_pct": 4.33
+    },
+    "radiographic_size": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "float": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "pathologic_size": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "float": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "malignant": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "bool": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "pathology_t_stage": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "pathology_n_stage": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "pathology_m_stage": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "tumor_histologic_subtype": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "tumor_necrosis": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 34,
+        "bool": 266
+      },
+      "null_count": 34,
+      "null_pct": 11.33
+    },
+    "tumor_isup_grade": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 56,
+        "int": 244
+      },
+      "null_count": 56,
+      "null_pct": 18.67
+    },
+    "clavien_surgical_complications": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 1,
+        "str": 299
+      },
+      "null_count": 1,
+      "null_pct": 0.33
+    },
+    "er_visit": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 3,
+        "bool": 297
+      },
+      "null_count": 3,
+      "null_pct": 1.0
+    },
+    "readmission": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 3,
+        "bool": 297
+      },
+      "null_count": 3,
+      "null_pct": 1.0
+    },
+    "estimated_blood_loss": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 1,
+        "int": 299
+      },
+      "null_count": 1,
+      "null_pct": 0.33
+    },
+    "surgery_type": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "surgical_procedure": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "surgical_approach": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "operative_time": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "NoneType": 2,
+        "int": 298
+      },
+      "null_count": 2,
+      "null_pct": 0.67
+    },
+    "cytoreductive": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "bool": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "positive_resection_margins": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "bool": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "last_preop_egfr": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "dict": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "first_postop_egfr": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "dict": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "last_postop_egfr": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "dict": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "vital_status": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "vital_days_after_surgery": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "int": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "voxel_spacing": {
+      "role": "permitted_clinical",
+      "present_in_cases": 300,
+      "python_types": {
+        "dict": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "sarcomatoid_features": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "bool": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "rhabdoid_features": {
+      "role": "FORBIDDEN",
+      "present_in_cases": 300,
+      "python_types": {
+        "bool": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "aua_risk_group": {
+      "role": "target",
+      "present_in_cases": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0
+    }
+  },
+  "permitted_feature_details": {
+    "age_at_nephrectomy": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "int": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 300,
+      "non_numeric_non_null_count": 0,
+      "non_numeric_values": {},
+      "numeric_stats": {
+        "min": 1.0,
+        "p25": 51.0,
+        "median": 60.5,
+        "mean": 58.8867,
+        "std": 13.7737,
+        "p75": 68.0,
+        "max": 90.0
+      }
+    },
+    "gender": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 0,
+      "non_numeric_non_null_count": 300,
+      "non_numeric_values": {
+        "'male'": 179,
+        "'female'": 120,
+        "'transgender_male_to_female'": 1
+      }
+    },
+    "body_mass_index": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "float": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 300,
+      "non_numeric_non_null_count": 0,
+      "non_numeric_values": {},
+      "numeric_stats": {
+        "min": 16.2,
+        "p25": 26.177500000000002,
+        "median": 29.810000000000002,
+        "mean": 30.8583,
+        "std": 6.6669,
+        "p75": 35.2575,
+        "max": 55.39
+      }
+    },
+    "comorbidities": {
+      "structure": "nested_dict",
+      "outer_null_count": 0,
+      "subkey_count": 19,
+      "subkeys": {
+        "myocardial_infarction": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 287,
+            "True": 13
+          }
+        },
+        "congestive_heart_failure": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 292,
+            "True": 8
+          }
+        },
+        "peripheral_vascular_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 287,
+            "True": 13
+          }
+        },
+        "cerebrovascular_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 292,
+            "True": 8
+          }
+        },
+        "dementia": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 299,
+            "True": 1
+          }
+        },
+        "copd": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 287,
+            "True": 13
+          }
+        },
+        "connective_tissue_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 299,
+            "True": 1
+          }
+        },
+        "peptic_ulcer_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 296,
+            "True": 4
+          }
+        },
+        "uncomplicated_diabetes_mellitus": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 242,
+            "True": 58
+          }
+        },
+        "diabetes_mellitus_with_end_organ_damage": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 298,
+            "True": 2
+          }
+        },
+        "chronic_kidney_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 276,
+            "True": 24
+          }
+        },
+        "hemiplegia_from_stroke": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 299,
+            "True": 1
+          }
+        },
+        "leukemia": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 299,
+            "True": 1
+          }
+        },
+        "malignant_lymphoma": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 298,
+            "True": 2
+          }
+        },
+        "localized_solid_tumor": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 257,
+            "True": 43
+          }
+        },
+        "metastatic_solid_tumor": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 283,
+            "True": 17
+          }
+        },
+        "mild_liver_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 296,
+            "True": 4
+          }
+        },
+        "moderate_to_severe_liver_disease": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 299,
+            "True": 1
+          }
+        },
+        "aids": {
+          "n_total": 300,
+          "python_types": {
+            "bool": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 0,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "bool_counts": {
+            "False": 300
+          }
+        }
+      },
+      "true_count_per_patient_distribution": {
+        "0": 171,
+        "1": 72,
+        "2": 35,
+        "3": 17,
+        "4": 4,
+        "5": 1
+      }
+    },
+    "smoking_history": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 0,
+      "non_numeric_non_null_count": 300,
+      "non_numeric_values": {
+        "'never_smoked'": 137,
+        "'previous_smoker'": 120,
+        "'current_smoker'": 43
+      }
+    },
+    "age_when_quit_smoking": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "NoneType": 35,
+        "str": 265
+      },
+      "null_count": 35,
+      "null_pct": 11.67,
+      "numeric_parseable_count": 85,
+      "non_numeric_non_null_count": 180,
+      "non_numeric_values": {
+        "'not_applicable'": 180
+      },
+      "numeric_stats": {
+        "min": 0.0,
+        "p25": 30.0,
+        "median": 43.0,
+        "mean": 42.6941,
+        "std": 15.1696,
+        "p75": 55.0,
+        "max": 73.0
+      }
+    },
+    "pack_years": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "NoneType": 106,
+        "int": 137,
+        "str": 57
+      },
+      "null_count": 106,
+      "null_pct": 35.33,
+      "numeric_parseable_count": 194,
+      "non_numeric_non_null_count": 0,
+      "non_numeric_values": {},
+      "numeric_stats": {
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "mean": 9.768,
+        "std": 23.0502,
+        "p75": 8.5,
+        "max": 210.0
+      }
+    },
+    "chewing_tobacco_use": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 0,
+      "non_numeric_non_null_count": 300,
+      "non_numeric_values": {
+        "'never_or_not_in_last_3mo'": 295,
+        "'quit_in_last_3mo'": 5
+      }
+    },
+    "alcohol_use": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "str": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 0,
+      "non_numeric_non_null_count": 300,
+      "non_numeric_values": {
+        "'two_or_less_daily'": 146,
+        "'never_or_not_in_last_3mo'": 131,
+        "'more_than_two_daily'": 17,
+        "''": 5,
+        "'quit_in_last_3mo'": 1
+      }
+    },
+    "last_preop_egfr": {
+      "structure": "nested_dict",
+      "outer_null_count": 0,
+      "subkey_count": 2,
+      "subkeys": {
+        "value": {
+          "n_total": 300,
+          "python_types": {
+            "NoneType": 74,
+            "float": 177,
+            "str": 49
+          },
+          "null_count": 74,
+          "null_pct": 24.67,
+          "numeric_parseable_count": 177,
+          "non_numeric_non_null_count": 49,
+          "non_numeric_values": {
+            "'>=90'": 49
+          },
+          "numeric_stats": {
+            "min": 17.0,
+            "p25": 60.0,
+            "median": 71.0,
+            "mean": 69.7006,
+            "std": 13.539,
+            "p75": 80.0,
+            "max": 90.0
+          }
+        },
+        "days_before_nephrectomy": {
+          "n_total": 300,
+          "python_types": {
+            "NoneType": 74,
+            "int": 226
+          },
+          "null_count": 74,
+          "null_pct": 24.67,
+          "numeric_parseable_count": 226,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "numeric_stats": {
+            "min": 1.0,
+            "p25": 6.0,
+            "median": 14.0,
+            "mean": 22.1195,
+            "std": 21.13,
+            "p75": 34.75,
+            "max": 90.0
+          }
+        }
+      }
+    },
+    "radiographic_size": {
+      "structure": "scalar",
+      "n_total": 300,
+      "python_types": {
+        "float": 300
+      },
+      "null_count": 0,
+      "null_pct": 0.0,
+      "numeric_parseable_count": 300,
+      "non_numeric_non_null_count": 0,
+      "non_numeric_values": {},
+      "numeric_stats": {
+        "min": 1.2,
+        "p25": 2.6,
+        "median": 4.1,
+        "mean": 5.03,
+        "std": 3.1923,
+        "p75": 6.025,
+        "max": 16.2
+      }
+    },
+    "voxel_spacing": {
+      "structure": "nested_dict",
+      "outer_null_count": 0,
+      "subkey_count": 3,
+      "subkeys": {
+        "x_spacing": {
+          "n_total": 300,
+          "python_types": {
+            "float": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 300,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "numeric_stats": {
+            "min": 0.4375,
+            "p25": 0.72265625,
+            "median": 0.78125,
+            "mean": 0.7939,
+            "std": 0.1038,
+            "p75": 0.8618163466453552,
+            "max": 1.0410000085830688
+          }
+        },
+        "y_spacing": {
+          "n_total": 300,
+          "python_types": {
+            "float": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 300,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "numeric_stats": {
+            "min": 0.4375,
+            "p25": 0.72265625,
+            "median": 0.78125,
+            "mean": 0.7939,
+            "std": 0.1038,
+            "p75": 0.8618163466453552,
+            "max": 1.0410000085830688
+          }
+        },
+        "z_spacing": {
+          "n_total": 300,
+          "python_types": {
+            "float": 300
+          },
+          "null_count": 0,
+          "null_pct": 0.0,
+          "numeric_parseable_count": 300,
+          "non_numeric_non_null_count": 0,
+          "non_numeric_values": {},
+          "numeric_stats": {
+            "min": 0.5,
+            "p25": 1.25,
+            "median": 3.0,
+            "mean": 3.176,
+            "std": 1.7519,
+            "p75": 5.0,
+            "max": 5.0
+          }
+        }
+      }
+    }
+  },
+  "edge_cases": {
+    "smoking_history_vs_age_when_quit": {
+      "never_smoked": {
+        "'not_applicable'": 137
+      },
+      "previous_smoker": {
+        "numeric": 85,
+        "None": 35
+      },
+      "current_smoker": {
+        "'not_applicable'": 43
+      }
+    },
+    "smoking_history_vs_pack_years": {
+      "never_smoked": {
+        "numeric": 137
+      },
+      "previous_smoker": {
+        "numeric": 39,
+        "None": 81
+      },
+      "current_smoker": {
+        "numeric": 18,
+        "None": 25
+      }
+    }
+  },
+  "local_nifti_status": {
+    "imaging_dir_checked": "X:\\Metafusion\\KNIGHT\\knight\\data",
+    "seg_dir_checked": "X:\\Metafusion\\data\\raw\\kits21_segmentations",
+    "local_imaging_count": 0,
+    "local_segmentation_count": 0,
+    "sample_segmentation_inspection": []
+  }
+}

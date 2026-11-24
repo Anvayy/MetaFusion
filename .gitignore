@@ -22,16 +22,31 @@ env/
 *.pem
 *.key
 
-# Large medical imaging data & model weights (adjust if using Git LFS)
+# Raw & heavy data artifacts (keep splits/ and small CSVs tracked)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/slices/
+data/processed/*.npy
+data/processed/*.npz
 *.nii
 *.nii.gz
 *.dcm
+
+# Model weights & run artifacts
+outputs/checkpoints/*
+!outputs/checkpoints/.gitkeep
+outputs/logs/*
+!outputs/logs/.gitkeep
 *.pt
 *.pth
 *.ckpt
 *.safetensors
 *.h5
 *.hdf5
+
+# External reference repos (cloned on approval)
+external/*
+!external/.gitkeep
 
 # IDE & OS
 .vscode/

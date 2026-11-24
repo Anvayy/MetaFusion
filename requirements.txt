@@ -1,0 +1,26 @@
+# Core scientific & deep learning stack (verified against Python 3.10.11 + RTX 5060 Ti CUDA 12.8)
+# Note: PyTorch nightly/cu128 is required for RTX 50-series (Blackwell sm_120) GPU support:
+#   pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
+torch>=2.8.0.dev20250618
+torchvision>=0.23.0.dev20250619
+
+# Medical imaging
+SimpleITK>=2.4.0
+nibabel>=5.4.0
+Pillow>=11.0.0
+scikit-image>=0.24.0
+
+# Tabular, ML, metrics & config
+numpy>=2.2.0
+pandas>=2.3.0
+scipy>=1.15.0
+scikit-learn>=1.7.0
+PyYAML>=6.0.0
+tqdm>=4.66.0
+
+# Testing
+pytest>=9.0.0
+
+# Visualization (needed for Phase 3 visual QA overlays & Phase 6 confusion matrices;
+# NOT yet installed in current environment — ask user before installing)
+matplotlib>=3.9.0
