@@ -1,0 +1,3 @@
+[submodule "KNIGHT"]
+	path = KNIGHT
+	url = https://github.com/neheller/KNIGHT.git
