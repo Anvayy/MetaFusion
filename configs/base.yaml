@@ -9,7 +9,7 @@ paths:
   knight_repo: KNIGHT
   knight_json: KNIGHT/knight/data/knight.json
   knight_imaging_dir: KNIGHT/knight/data
-  kits21_seg_dir: data/raw/kits21_segmentations
+  kits23_seg_dir: data/raw/kits23_segmentations  # Masks ONLY for KNIGHT case_00000..case_00299 (never case_00300+)
   splits_file: data/splits/folds.json
   slice_index_csv: data/processed/slice_index.csv
   slices_dir: data/processed/slices
@@ -47,6 +47,33 @@ data:
     intermediate_risk: 0
     high_risk: 1
     very_high_risk: 1
+  metadata_schema:
+    # Approved Phase 1 design (strictly derived from the 12 permitted clinical fields)
+    scalar_numeric_features:
+      - age_at_nephrectomy
+      - body_mass_index
+      - age_when_quit_smoking
+      - pack_years
+      - radiographic_size
+    scalar_categorical_features:
+      - gender
+      - smoking_history
+      - chewing_tobacco_use
+      - alcohol_use
+    nested_numeric_features:
+      - last_preop_egfr.value
+      - last_preop_egfr.days_before_nephrectomy
+      - voxel_spacing.x_spacing
+      - voxel_spacing.y_spacing
+      - voxel_spacing.z_spacing
+    comorbidities_key: comorbidities
+    egfr_ge_90_value: 90.0
+    add_egfr_ge_90_indicator: true
+    add_missing_indicators: true
+    missing_category_token: missing
+    not_applicable_tokens:
+      - not_applicable
+      - ""
 
 cv:
   n_splits: 5

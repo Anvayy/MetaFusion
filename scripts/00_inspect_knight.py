@@ -281,7 +281,7 @@ def build_report(cfg: dict[str, Any]) -> dict[str, Any]:
 
     local_nifti = inspect_local_nifti(
         REPO_ROOT / cfg["paths"]["knight_imaging_dir"],
-        REPO_ROOT / cfg["paths"]["kits21_seg_dir"],
+        REPO_ROOT / cfg["paths"].get("kits23_seg_dir", "data/raw/kits23_segmentations"),
     )
 
     return {
