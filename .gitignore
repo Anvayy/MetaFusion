@@ -26,6 +26,7 @@ env/
 data/raw/*
 !data/raw/.gitkeep
 data/processed/slices/
+data/processed/qa_masks/
 data/processed/*.npy
 data/processed/*.npz
 *.nii

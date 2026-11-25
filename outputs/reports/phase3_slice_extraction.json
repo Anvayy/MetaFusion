@@ -1,0 +1,79 @@
+{
+  "n_processed": 300,
+  "n_missing_tumor_mask": 0,
+  "n_shape_mismatch": 0,
+  "n_affine_mismatch": 0,
+  "depth_axes_seen": [
+    0
+  ],
+  "axcodes_seen": [
+    "IPL"
+  ],
+  "min_tumor_area_mm2": 98.22,
+  "max_tumor_area_mm2": 14782.32,
+  "qa_summary": {
+    "missing_tumor_cases": [],
+    "smallest_tumor_cases": [
+      "case_00234",
+      "case_00165",
+      "case_00289"
+    ],
+    "largest_tumor_cases": [
+      "case_00042",
+      "case_00030",
+      "case_00233"
+    ],
+    "random_sample_cases": [
+      "case_00012",
+      "case_00013",
+      "case_00015",
+      "case_00016",
+      "case_00044",
+      "case_00047",
+      "case_00052",
+      "case_00057",
+      "case_00071",
+      "case_00101",
+      "case_00111",
+      "case_00114",
+      "case_00119",
+      "case_00125",
+      "case_00140",
+      "case_00214",
+      "case_00216",
+      "case_00258",
+      "case_00279",
+      "case_00287"
+    ],
+    "total_overlays_saved": 26,
+    "saved_files": [
+      "outputs/figures/phase3_qa/EXTREME_SMALLEST_1_case_00234_z59.png",
+      "outputs/figures/phase3_qa/EXTREME_SMALLEST_2_case_00165_z357.png",
+      "outputs/figures/phase3_qa/EXTREME_SMALLEST_3_case_00289_z24.png",
+      "outputs/figures/phase3_qa/EXTREME_LARGEST_1_case_00042_z198.png",
+      "outputs/figures/phase3_qa/EXTREME_LARGEST_2_case_00030_z19.png",
+      "outputs/figures/phase3_qa/EXTREME_LARGEST_3_case_00233_z43.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00012_z23.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00013_z40.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00015_z57.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00016_z58.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00044_z33.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00047_z84.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00052_z157.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00057_z54.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00071_z148.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00101_z64.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00111_z59.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00114_z179.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00119_z23.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00125_z64.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00140_z140.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00214_z210.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00216_z286.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00258_z62.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00279_z26.png",
+      "outputs/figures/phase3_qa/RANDOM_case_00287_z14.png",
+      "outputs/figures/phase3_qa/QA_CONTACT_SHEET.png"
+    ]
+  }
+}
